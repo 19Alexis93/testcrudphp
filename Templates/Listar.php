@@ -3,7 +3,7 @@ require_once 'Entidades/Category.php';
 require_once 'Entidades/Product.php';
 ?>
 <section>
-    <div>
+    <div class="overflow-auto max-h-96	">
         <div class="relative overflow-x-auto w-4/5 mt-4">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

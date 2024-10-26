@@ -15,21 +15,23 @@
 </header>
 
 <body ng-controller="myCtrl">
-    <section>
-        <div class="mt-16" ng-if="!crear && !editar">
-            <button ng-click="crearProducto()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                Crear producto
-            </button>
+    <div class="flex flex-col w-full ml-8">
+        <section>
+            <div class="mt-16" ng-if="!crear && !editar">
+                <button ng-click="crearProducto()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    Crear producto
+                </button>
+            </div>
+        </section>
+        <div ng-if="!crear && !editar">
+            <?php require_once 'Templates/Listar.php'; ?>
         </div>
-    </section>
-    <div ng-if="!crear && !editar">
-        <?php require_once 'Templates/Listar.php'; ?>
-    </div>
-    <div ng-if="crear">
-        <?php require_once 'Templates/Crear.php'; ?>
-    </div>
-    <div ng-if=editar>
-        <?php require_once 'Templates/Editar.php'; ?>
+        <div ng-if="crear">
+            <?php require_once 'Templates/Crear.php'; ?>
+        </div>
+        <div ng-if=editar>
+            <?php require_once 'Templates/Editar.php'; ?>
+        </div>
     </div>
 </body>
 
